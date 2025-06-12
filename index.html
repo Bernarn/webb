@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bernard Godonou - Personal Blog</title>
+    <link rel="stylesheet" href="mystyles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Bernard's Tech Blog</h1>
+            <nav>
+                <ul>
+                    <li><a href="#intro">About</a></li>
+                    <li><a href="#qa">Web Design Q&A</a></li>
+                    <li><a href="#subscribe">Subscribe</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Intro Section -->
+        <section id="intro" class="intro-section">
+            <h2>Welcome to My Blog</h2>
+            <div class="intro-content">
+                <p>My name is Bernard Godonou, a third-year Computer Science student at USIU AFRICA, a multicultural university in Kenya. I'm currently taking Advanced Web Design.</p>
+                <p>Welcome to my personal blog where I share insights about web development, computer science, and my journey as a student in the tech world.</p>
+            </div>
+        </section>
+
+        <!-- Web Design Q&A Section -->
+        <section id="qa" class="qa-section">
+            <h2>Web Design Q&A</h2>
+            
+            <article class="qa-block">
+                <h3 class="question">What is a primary reason for using embedded styles, and where are they placed within an HTML document?</h3>
+                <div class="answer">
+                    <p>A primary reason for using embedded styles is to apply styles that are specific to a single HTML document without creating a separate CSS file. This is particularly useful for page-specific styling that won't be reused across multiple pages.</p>
+                    <p>Embedded styles are placed within the <code>&lt;style&gt;</code> element in the <code>&lt;head&gt;</code> section of an HTML document. They allow you to define CSS rules that apply only to that particular page, offering more specificity than external stylesheets while maintaining better organization than inline styles.</p>
+                </div>
+            </article>
+
+            <article class="qa-block">
+                <h3 class="question">Explain the main advantage of using external style sheets. How does a web page link to an external style sheet to apply its styles?</h3>
+                <div class="answer">
+                    <p>The main advantage of using external style sheets is <strong>reusability and maintainability</strong>. External CSS files can be linked to multiple HTML pages, ensuring consistent styling across an entire website. This approach promotes:</p>
+                    <ul>
+                        <li>Better code organization and separation of concerns</li>
+                        <li>Easier maintenance - changes in one file affect all linked pages</li>
+                        <li>Improved loading performance through browser caching</li>
+                        <li>Cleaner HTML code without embedded styles</li>
+                    </ul>
+                    <p>A web page links to an external style sheet using the <code>&lt;link&gt;</code> element placed in the <code>&lt;head&gt;</code> section of the HTML document. The link element specifies the relationship as "stylesheet" and provides the path to the CSS file.</p>
+                </div>
+            </article>
+
+            <article class="qa-block">
+                <h3 class="question">Provide the specific HTML code required to link a web page to an external style sheet named "mystyles.css".</h3>
+                <div class="answer">
+                    <p>The specific HTML code required to link to an external stylesheet named "mystyles.css" is:</p>
+                    <div class="code-block">
+                        <code>&lt;link rel="stylesheet" href="mystyles.css"&gt;</code>
+                    </div>
+                    
+                    <!-- Code Screenshot Visual -->
+                    <div class="code-screenshot">
+                        <div class="screenshot-header">
+                            <div class="screenshot-controls">
+                                <span class="control red"></span>
+                                <span class="control yellow"></span>
+                                <span class="control green"></span>
+                            </div>
+                            <span class="screenshot-title">HTML Document</span>
+                        </div>
+                        <div class="screenshot-content">
+                            <div class="line-numbers">
+                                <span>1</span>
+                                <span>2</span>
+                                <span>3</span>
+                                <span>4</span>
+                                <span>5</span>
+                                <span>6</span>
+                            </div>
+                            <div class="code-content">
+                                <div class="code-line"><span class="tag">&lt;!DOCTYPE html&gt;</span></div>
+                                <div class="code-line"><span class="tag">&lt;html</span> <span class="attr">lang</span>=<span class="string">"en"</span><span class="tag">&gt;</span></div>
+                                <div class="code-line"><span class="tag">&lt;head&gt;</span></div>
+                                <div class="code-line highlighted">    <span class="tag">&lt;link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"mystyles.css"</span><span class="tag">&gt;</span></div>
+                                <div class="code-line"><span class="tag">&lt;/head&gt;</span></div>
+                                <div class="code-line"><span class="tag">&lt;body&gt;</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Subscription Form -->
+        <section id="subscribe" class="subscribe-section">
+            <h2>Subscribe to Blog Updates</h2>
+            <p>Stay updated with my latest posts about web development and computer science!</p>
+            
+            <form class="subscription-form" action="#" method="post">
+                <div class="form-group">
+                    <label for="subscriber-name">Full Name</label>
+                    <input type="text" id="subscriber-name" name="name" required placeholder="Enter your full name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="subscriber-email">Email Address</label>
+                    <input type="email" id="subscriber-email" name="email" required placeholder="Enter your email address">
+                </div>
+                
+                <button type="submit" class="subscribe-btn">Subscribe to Updates</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Bernard Godonou. All rights reserved. | Computer Science Student at USIU AFRICA</p>
+        </div>
+    </footer>
+
+</body>
+</html>
